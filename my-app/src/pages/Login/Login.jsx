@@ -6,6 +6,7 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const phoneInput = useRef(null);
+  const sendBtn = useRef(null);
   const erorr = useRef(null);
 
   const isValid = (number) => {
@@ -25,16 +26,21 @@ const Login = () => {
       erorr.current.classList.remove("text-red-500");
       erorr.current.textContent  = ''
       phoneInput.current.classList.remove("border-red-erorr")
+      sendBtn.current.classList.remove("bg-[#79b8ec]")
+      sendBtn.current.classList.add("bg-[#1998ff]")
     }
     else{
       erorr.current.classList.add("text-red-500");
       phoneInput.current.classList.add("border-red-erorr")
+      sendBtn.current.classList.remove("bg-[#1998ff]")
+      sendBtn.current.classList.add("bg-[#79b8ec]")
     }
   },[phoneNumber])
   
   useEffect(()=>{
     erorr.current.textContent  = ''
     phoneInput.current.classList.remove("border-red-erorr")
+    sendBtn.current.classList.add("bg-[#79b8ec]")
   },[])
 
   return (
@@ -89,7 +95,7 @@ const Login = () => {
                 </div>
             </div>
             <div className="w-full flex flex-col items-center mt-20">
-                <button className="bg-[#79b8ec] hover:bg-[#1998ff] p-10 text-2xl transition-all border-12 text-white w-[90%]">
+                <button ref={sendBtn} className="p-10 text-2xl transition-all border-12 text-white w-[90%]">
                 تایید و دریافت کد{" "}
                 </button>
                 <div className="flex justify-center p-10">
