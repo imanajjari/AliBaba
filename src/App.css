@@ -1,0 +1,54 @@
+@font-face {
+    src: local('alibaba-bold.woff2-bbb24413'), url(./font/alibaba-bold.woff2-bbb24413.woff2) format('woff2');
+    font-family: 'alibaba';
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: alibaba;
+    box-sizing: border-box;
+  }
+.dr-rtl{
+    direction: rtl;
+}
+.border-12{
+    border-radius: 12px;
+}
+.border-t-12{
+    border-radius: 12px 12px 0 0;
+}
+.border-1{
+    border: 1px solid rgb(202, 199, 199);
+}
+.border-l-1{
+    border-left: 1px solid rgb(202, 199, 199);
+}
+.border-b-1{
+    border-bottom: 1px solid rgb(202, 199, 199);
+}
+.border-0{
+    border-radius: 0px;
+}
+.border-red-erorr{
+    border: 1px solid rgb(255, 91, 91);;
+}
+.box-shadow{
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .08); 
+}
+.box-shadow-hover:hover{
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .08); 
+}
+.border-t-1{
+    border-top: 1px solid rgb(202, 199, 199);
+}
+
+@media (min-width: 640px) {
+    .border-1-sm{
+        border: 1px solid rgb(202, 199, 199);
+    }
+
+    .border-l-1-sm{
+        border-left: 1px solid rgb(202, 199, 199);
+    }
+}
