@@ -1,8 +1,5 @@
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import image2 from "./images/2.jpg";
-import image3 from "./images/3.jpg";
-import image4 from "./images/4.jpg";
 
 import { useState } from "react";
 import "./style.css";
@@ -39,7 +36,7 @@ export const Slider = ({images}) => {
                     className="slide w-full  flex"
                     key={index}
                   >
-                    <img className="w-[100%] h-[100%] object-cove border-12 sm:rounded-none" src={elem} />
+                    <img className="w-[100%] h-[100%] object-cove border-12 sm:rounded-none" src={elem} alt='img' />
                   </div>
                 ))}
               </div>

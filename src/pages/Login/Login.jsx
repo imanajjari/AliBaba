@@ -3,17 +3,18 @@ import { NavBar, Footer } from "./../../components";
 import { MainLogo } from "../../components/Icons/MainLogo";
 import SvgLogin from "./SvgLogin";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const phoneInput = useRef(null);
   const sendBtn = useRef(null);
   const erorr = useRef(null);
+  const navigate = useNavigate();
 
   const isValid = (number) => {
     if (number.length > 10 && !number.includes(" ")) {
-      if (number[0] === 0 && number[1] === 9) {
+      if (number[0] == 0 && number[1] == 9) {
         return true;
       }
       erorr.current.textContent = "شماره مبایل باید با 0 و 9 شروع شده باشد .";
@@ -42,7 +43,15 @@ const Login = () => {
     erorr.current.textContent = "";
     phoneInput.current.classList.remove("border-red-erorr");
     sendBtn.current.classList.add("bg-[#79b8ec]");
+    sendBtn.current.classList.add("bg-[#79b8ec]");
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isValid(phoneNumber)) {
+      navigate("/profile");
+    }
+  }
 
   return (
     <div className="">
@@ -56,7 +65,7 @@ const Login = () => {
               برای خرید آسان و امن و مشاهده تخفیف‌های ویژه علی‌بابا، عضو شوید.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-between h-[100vh] md:h-auto pt-[100px] md:pt-10 dr-rtl w-full md:w-1/2 md:border-l ml-4">
+          <form onSubmit={handleSubmit} className="flex flex-col items-center justify-between h-[100vh] md:h-auto pt-[100px] md:pt-10 dr-rtl w-full md:w-1/2 md:border-l ml-4">
             <div className="w-full flex flex-col px-10">
               <div className=" block md:hidden">
                 <MainLogo />
@@ -97,15 +106,17 @@ const Login = () => {
             <div className="w-full flex flex-col items-center mt-20">
               <button
                 ref={sendBtn}
+                disabled={isValid}
                 className="p-10 text-2xl transition-all border-12 text-white w-[90%]"
+                type="submit"
               >
-                تایید و دریافت کد{" "}
+                تایید و دریافت کد
               </button>
               <div className="flex justify-center p-10">
                 <Link className="text-lg text-sky-600">ورود با کبمه عبور</Link>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div className=" hidden md:block">

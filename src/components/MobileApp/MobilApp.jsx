@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const MobilApp = () => {
     return (
@@ -13,7 +14,7 @@ export const MobilApp = () => {
                 <p className='p-2 md:text-2xl md:text-gray-500'>
                     همه سفر ها در جیب شماس 
                 </p>
-                <a href='#' className='bg-cyan-600 p-4 border-12 text-white md:text-4xl md:mt-20'>راهنمای نصب</a>
+                <Link className='bg-cyan-600 p-4 border-12 text-white md:text-4xl md:mt-20'>راهنمای نصب</Link>
             </div>
         </div>
     );

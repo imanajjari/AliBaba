@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export const ServisIcons = () => {
     return (
         <div className='flex justify-between border-1-sm border-12 sm:border-slate-300 sm:mt-10 sm:w-full sm:justify-around xl:mb-[80px]'>
             <div className='p-1 my-4 bg-slate-200 border-12 sm:bg-white flex items-center cursor-pointer'>
+                <Link to={'/visa'}>
                 <div>
                     <svg className='w-[48px] xl:w-[80px]' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M32.25 40.0391H37.0962V41.8852C37.0962 42.3137 36.926 42.7246 36.6231 43.0275C36.3201 43.3305 35.9092 43.5006 35.4808 43.5006H33.8654C33.437 43.5006 33.0261 43.3305 32.7231 43.0275C32.4202 42.7246 32.25 42.3137 32.25 41.8852V40.0391Z" fill="url(#paint0_linear_8564_220426)"/>
@@ -66,9 +68,11 @@ export const ServisIcons = () => {
                     </svg>
                 </div>
                 <p className='hidden sm:block text-gray-500 text-xl xl:text-2xl'>سفر کارت سازمانی</p>
+                </Link>
             </div>
 
             <div className='p-1 my-4 bg-slate-200 border-12 sm:bg-white flex items-center cursor-pointer'>
+                <Link to={'/login'}>
                 <div>
                     <svg className='w-[48px] xl:w-[80px]' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="6.42737" y="4.5" width="30.4662" height="38.9996" rx="7" fill="url(#paint0_linear_8564_220441)"/>
@@ -101,8 +105,10 @@ export const ServisIcons = () => {
                     </svg>
                 </div>
                 <p className='hidden sm:block text-gray-500 text-xl xl:text-2xl'>بیمه مسافرتی</p>
+                </Link>
             </div>
             <div className='p-1 my-4 bg-slate-200 border-12 sm:bg-white flex items-center cursor-pointer'>
+            <Link to={'/visa'}>
                 <div>
                     <svg className='w-[48px] xl:w-[80px]' viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_8564_220398)">
@@ -126,8 +132,10 @@ export const ServisIcons = () => {
                     </svg>
                 </div>
                 <p className='hidden sm:block text-gray-500 text-xl xl:text-2xl'>ویزای سفر</p>
+                </Link>
             </div>
             <div className='p-1 my-4 bg-slate-200 border-12 sm:bg-white flex items-center cursor-pointer'>
+            <Link to={'/visa'}>
                 <div>
                     <svg className='w-[48px] xl:w-[80px]' viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.0835 13.6333C4.0835 11.7979 4.0835 10.8802 4.43501 10.1767C4.75766 9.53094 5.28119 9.00741 5.9269 8.68477C6.6304 8.33325 7.5481 8.33325 9.3835 8.33325H31.2835C33.1189 8.33325 34.0366 8.33325 34.7401 8.68477C35.3858 9.00741 35.9093 9.53094 36.232 10.1767C36.5835 10.8802 36.5835 11.7979 36.5835 13.6333V26.3666C36.5835 28.202 36.5835 29.1197 36.232 29.8232C35.9093 30.4689 35.3858 30.9924 34.7401 31.3151C34.0366 31.6666 33.1189 31.6666 31.2835 31.6666H9.3835C7.5481 31.6666 6.6304 31.6666 5.9269 31.3151C5.28119 30.9924 4.75766 30.4689 4.43501 29.8232C4.0835 29.1197 4.0835 28.202 4.0835 26.3666V13.6333Z" fill="url(#paint0_linear_6679_20259)"/>
@@ -155,6 +163,7 @@ export const ServisIcons = () => {
                     </svg>
                 </div>
                 <p className='hidden sm:block text-gray-500 text-xl xl:text-2xl'>توز گروهی</p>
+                </Link>
             </div>
         </div>
     );

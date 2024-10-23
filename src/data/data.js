@@ -107,6 +107,7 @@ const visasData = [
         price: 300,
     },
 ]
+const profile = []
 export {
     questionsHelpData,
     questionsHomeData,
