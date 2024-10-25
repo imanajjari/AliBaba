@@ -17,7 +17,9 @@ import baner from "../../images/baner-home.jpg";
 const Home = () => {
   return (
     <div>
-      <NavBar />
+      <div className="hidden sm:block">
+        <NavBar />
+      </div>
       <div className="homepage-bg relative flex justify-center mb-[150px]">
         <img
           className="hidden sm:block"

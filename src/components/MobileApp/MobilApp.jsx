@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const MobilApp = () => {
     return (
-        <div className='flex justify-between border border-2 border-slate-300 p-4 border-12 lg:px-[100px]'>
+        <div className='flex justify-between border-2 border-slate-300 p-4 border-12 lg:px-[100px]'>
             <img src="/images/bg-mobileApp.webp" alt="bg-mobileApp" className='w-1/3 md:w-1/2 lg:w-1/4 '/>
             <img src="/images/barcode.png" alt="barcode.png" className=' hidden lg:block w-[148px] h-[185px] mt-20'/>
 

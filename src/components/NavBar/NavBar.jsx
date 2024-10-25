@@ -4,12 +4,16 @@ import { MainLogo } from '../Icons/MainLogo';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LuggageIcon from '@mui/icons-material/Luggage';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 export const NavBar = memo(() => {
     return (
-        <div className='hidden sm:flex py-10 px-10 justify-between items-center xl:px-20 border-b-1 box-shadow'>
-
-                <div className='flex'>
+        <div className='flex py-10 px-10 justify-between items-center xl:px-20 border-b-1 box-shadow'>
+                <Link to={'/'} className='text-xl text-gray-600 sm:hidden'>
+                    <ArrowBackIosNewIcon />
+                    بازگشت به صفحه اصلی 
+                </Link>
+                <div className='hidden sm:flex'>
                     <Link to="/login">
                         <div className='md:text-lg md:px-4  xl:text-2xl'>
                             مرکز پشتیبانی انلاین
@@ -46,7 +50,7 @@ export const NavBar = memo(() => {
                         </div>
                     </Link>
                 </div>
-                <Link to="/">
+                <Link to="/" >
                     <div><MainLogo /></div>
                 </Link>
             </div>
